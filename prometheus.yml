@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "heydj"
+    metrics_path: "/api/metrics"
+    static_configs:
+      - targets:
+          # - host.docker.internal:3000 # If Prometheus runs in Docker
+          - "localhost:3000" # Use this if Prometheus is outside Docker
